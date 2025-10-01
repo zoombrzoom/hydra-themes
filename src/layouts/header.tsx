@@ -3,7 +3,7 @@ import Github from "@/assets/github.svg";
 import { ModeToggle } from "@/components/ui/theme-mode";
 import { buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Upload } from "lucide-react";
+import { NotebookPen, Search, Upload } from "lucide-react";
 import { I18nSelector } from "@/components/ui/i18n-selector";
 import { useStore } from "@nanostores/react";
 import { searchQuery } from "@/stores/search";
@@ -68,6 +68,17 @@ export function Header() {
           {/* <I18nSelector /> */}
 
           <ModeToggle />
+
+          <a
+            href="/sermon-tracker"
+            className={cn(
+              buttonVariants({ variant: "secondary" }),
+              "ml-2 hidden h-8 items-center gap-2 rounded-lg bg-slate-900/80 px-3 text-sm text-slate-100 backdrop-blur hover:bg-slate-900 sm:flex",
+            )}
+          >
+            <NotebookPen className="size-4" />
+            Sermon App
+          </a>
 
           <a
             href="https://github.com/hydralauncher/hydra-themes/pulls"
